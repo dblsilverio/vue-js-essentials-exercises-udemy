@@ -1,4 +1,6 @@
-# images
+# images app
+
+App using Vuex, Vue Router and Imgur integration API for image sharing and management.
 
 ## Project setup
 ```
