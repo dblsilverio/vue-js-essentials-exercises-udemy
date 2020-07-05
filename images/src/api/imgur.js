@@ -23,7 +23,6 @@ export default {
         });
     },
     uploadImages(images, token) {
-        console.log(images);
         const promises = Array.from(images).map(image => {
             const formData = new FormData();
             formData.append('image', image);
@@ -36,5 +35,12 @@ export default {
         });
 
         return Promise.all(promises);
+    },
+    userProfile(token) {
+        return axios.get(`${IMGUR_ROOT_URL}/3/account/me`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
     }
 }
