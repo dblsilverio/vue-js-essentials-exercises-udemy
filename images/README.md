@@ -2,6 +2,10 @@
 
 App using Vuex, Vue Router and Imgur integration API for image sharing and management.
 
+## Final Result
+
+[![Image App Demo](http://img.youtube.com/vi/OL_b57dVLzQ/0.jpg)](http://www.youtube.com/watch?v=OL_b57dVLzQ "Image App Demo")
+
 ## Project setup
 ```
 yarn install
