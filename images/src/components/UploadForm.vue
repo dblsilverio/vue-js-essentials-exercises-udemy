@@ -1,17 +1,23 @@
 <template>
   <div class="dropper">
+    <div class="ui active inverted dimmer" v-if="isUploadInProgress">
+      <div class="ui text loader">Uploading Images...</div>
+    </div>
     <input type="file" @change="uploadImages($event.target.files)" multiple accept="image/*" />
     <span>Drop image here to upload!</span>
   </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "UploadForm",
   methods: {
-    ...mapActions(['uploadImages'])
+    ...mapActions(["uploadImages"])
+  },
+  computed: {
+    ...mapGetters(["isUploadInProgress"])
   }
 };
 </script>
